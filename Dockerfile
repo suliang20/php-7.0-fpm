@@ -160,9 +160,9 @@ RUN \
     && docker-php-ext-enable xdebug \
 
     # swoole require PHP version 7.0 or later.
-    && curl -fsSL 'https://pecl.php.net/get/swoole-4.4.3.tgz' -o swoole-4.4.3.tgz \
+    && curl -fsSL 'https://pecl.php.net/get/swoole-2.0.11.tgz' -o swoole-2.0.11.tgz \
     && mkdir swoole \
-    && tar -xf swoole-4.4.3.tgz -C swoole --strip-components=1 \
+    && tar -xf swoole-2.0.11.tgz -C swoole --strip-components=1 \
     && cd swoole && phpize && ./configure && make && make install \
     && docker-php-ext-enable swoole \
 
